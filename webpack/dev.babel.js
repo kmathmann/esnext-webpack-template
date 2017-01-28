@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import autoprefixer from 'autoprefixer';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const ROOT_PATH = path.resolve(__dirname);
 
@@ -53,37 +53,19 @@ export default {
             }
         ]
     },
-    devServer:{
-        port:8080,
-        compress:true,
-        hot:true
+    devServer: {
+        port: 8080,
+        compress: true,
+        hot: true
     },
     devtool: 'inline-source-map',
     plugins: [
-        new ExtractTextPlugin("[name].bundle.css"),
+        new HtmlWebpackPlugin(),
+        new ExtractTextPlugin('[name].bundle.css'),
         new webpack.DefinePlugin({
-            "process.env.NODE_ENV": JSON.stringify('development')
+            'process.env.NODE_ENV': JSON.stringify('development')
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
     ]
 };
-
-
-/*
- {
- test: /\.scss$/,
- loader: ExtractTextPlugin({
- fallbackLoader: 'style-loader',
- loaders: ['css-loader?sourceMap',
- {
- loader: 'postcss-loader?sourceMap',
- options: {
- plugins: () => [autoprefixer]
- },
- },
- 'sass-loader?sourceMap']
- }),
- include: path.resolve(ROOT_PATH, 'src')
- }
- */
