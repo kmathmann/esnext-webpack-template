@@ -3,13 +3,12 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const ROOT_PATH = path.resolve(__dirname);
+const ROOT_PATH = path.resolve('./');
 
 export default {
     entry: {
         template: [
-            path.resolve('./src/index'),
-            'whatwg-fetch'
+            path.resolve('./src/index')
         ]
     },
     resolve: {
@@ -55,12 +54,13 @@ export default {
     },
     devServer: {
         port: 8080,
-        compress: true,
-        hot: true
+        compress: true
     },
     devtool: 'inline-source-map',
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.resolve(ROOT_PATH, 'index.html')
+        }),
         new ExtractTextPlugin('[name].bundle.css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')

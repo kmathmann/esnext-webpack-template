@@ -10,7 +10,7 @@
     "indent":"off",
     "strict":0,
     "comma-dangle":"off",
-    "no-extranesu-dependencies":"off"
+    "import/no-extraneous-dependencies":"off"
   },
   "extends":"airbnb-base"
 }

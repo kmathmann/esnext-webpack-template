@@ -4,7 +4,7 @@
   "description": "ESNEXT template",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --colors --progress --config ./webpack/dev.babel.js",
+    "start": "webpack-dev-server --config ./webpack/dev.babel.js",
     "build": "webpack  --config ./webpack/prod.babel.js",
     "build:qa": "webpack -p --config ./webpack/qa.babel.js"
   },
