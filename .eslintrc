@@ -1,0 +1,15 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": false,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "linebreak-style":"off",
+    "indent":"off",
+    "strict":0,
+    "comma-dangle":"off"
+  },
+  "extends":"airbnb-base"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "esnext-template",
+  "version": "1.0.0",
+  "description": "ESNEXT template",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --colors --progress --config ./webpack/dev.babel.js",
+    "build": "webpack  --config ./webpack/prod.babel.js",
+    "build:qa": "webpack -p --config ./webpack/qa.babel.js"
+  },
+  "keywords": [
+    "es5",
+    "es6",
+    "es7",
+    "webpack",
+    "webpack-dev-server",
+    "eslint"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.0",
+    "node-sass": "^3.13.1",
+    "postcss-loader": "^1.2.2",
+    "sass-loader": "^3.2.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0",
+    "whatwg-fetch": "^2.0.2"
+  },
+  "author": "Kevin Mathmann",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "latest",
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}

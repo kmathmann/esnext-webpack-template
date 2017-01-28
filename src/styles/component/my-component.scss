@@ -1,0 +1,9 @@
+.my-component {
+   &__element {
+     height: 100px;
+   }
+   &--hidden {
+     display: none;
+     height: 20px;
+   }
+ }
