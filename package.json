@@ -1,11 +1,11 @@
 {
-  "name": "esnext-template",
+  "name": "esnext-webpack-template",
   "version": "1.0.0",
-  "description": "ESNEXT template",
+  "description": "esnext-webpack-template with babel, scss and much more.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/dev.babel.js",
-    "build": "webpack  --config ./webpack/prod.babel.js",
+    "build": "webpack -p --config ./webpack/prod.babel.js",
     "build:qa": "webpack -p --config ./webpack/qa.babel.js"
   },
   "keywords": [
@@ -13,6 +13,7 @@
     "es6",
     "es7",
     "webpack",
+    "webpack2",
     "webpack-dev-server",
     "eslint"
   ],

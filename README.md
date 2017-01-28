@@ -1,6 +1,7 @@
-#ESNEXTTemplate
-* webpack
-* webpack-dev-server
+#ESNEXT-Webpack-Template
+## Includes
+* webpack v2
+* webpack-dev-server v2
 * babel
     * babel-preset-latest
     * babel-preset-stage-0
@@ -8,28 +9,33 @@
 * eslint (with airbnb-base config)
 * SCSS -> extract to a bundled css file
 * autoprefixer
-* bundles become appendet to HTML automatic
-* appcache becomes generated
+* bundles become appendet to HTML automatically
+* appcache becomes generated automatically
 * fetch
 
 
 ## Installation
-1. Install deps via `npm i` oder `yarn`
-2. Fire up dev server via `npm start` oder `yarn start`
+1. Install dependencies via `yarn` or `npm i`.
+2. Fire up dev server via `yarn start` or `npm start`.
+3. Open [localhost:8080](http://localhost:8080) in an browser.
+4. Start development.
 
 ## Building
-You can build the project via `npm run build` oder `yarn run build`. 
+You can build the project via `yarn run build` or `npm run build`. 
 
-You can build the project with sourceMaps via `npm run build:qa` oder `yarn run build:qa`. 
+You can build the project with sourceMaps via `yarn run build:qa` or `npm run build:qa`. 
 
 ##Rename Bundle Filename
 
+Just change "template" under entry in `dev.babel.js` and `prod.babel.js`.
 ``` json
-// ...
-entry: {
-        <<name>>: [
-            // ...
+{
+    ...
+    entry: {
+        <filename>: [
+            ...
         ]
     },
-    // ...
+    ...
+}
 ```
