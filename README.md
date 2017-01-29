@@ -20,6 +20,15 @@
 3. Open [localhost:8080](http://localhost:8080) in an browser.
 4. Start development.
 
+#### node? npm? yarn? what?!
+- "Node.js is an open-source, cross-platform JavaScript runtime environment" - Wikipedia  
+- NPM is the Node Package Manager.  
+- Yarn is an alternative Package Manager from facebook.
+ 
+ When you does not installed Node.js yet you can download it from [here](//nodejs.org/).   
+ NPM becomes installed with Node.js.   
+You don't need yarn to use this template, but if you want to use yarn you can download it from [here](//yarnpkg.com/).   
+
 ## Building
 You can build the project via `yarn run build` or `npm run build`. 
 
