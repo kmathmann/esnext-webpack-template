@@ -1,4 +1,5 @@
-#ESNEXT-Webpack-Template
+# ESNEXT-Webpack-Template
+
 ## Includes
 * webpack v2
 * webpack-dev-server v2
@@ -9,8 +10,8 @@
 * eslint (with airbnb-base config)
 * SCSS -> extract to a bundled css file
 * autoprefixer
-* bundles become appendet to HTML automatically
-* appcache becomes generated automatically
+* bundles will be appended to HTML automatically
+* appcache will be generated automatically
 * fetch
 
 
@@ -34,7 +35,7 @@ You can build the project via `yarn run build` or `npm run build`.
 
 You can build the project with sourceMaps via `yarn run build:qa` or `npm run build:qa`. 
 
-##Rename Bundle Filename
+## Rename Bundle Filename
 
 Just change "template" under entry in `dev.babel.js` and `prod.babel.js`.
 ``` json
