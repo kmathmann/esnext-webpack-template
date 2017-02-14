@@ -1,4 +1,4 @@
-import 'whatwg-fetch';
+import './utils/polyfill';
 import './styles/main.scss';
 import getHtml from './utils/get-html';
 
