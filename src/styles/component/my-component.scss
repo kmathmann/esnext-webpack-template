@@ -1,10 +1,11 @@
 .my-component {
-   &__element {
-     height: 100px;
-     text-align: center;
-   }
-   &--hidden {
-     display: none;
-     height: 20px;
-   }
- }
+  &__element {
+    height: 100px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  &--hidden {
+    display: none;
+    height: 20px;
+  }
+}

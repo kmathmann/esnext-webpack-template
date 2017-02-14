@@ -1,18 +1,25 @@
 import './utils/polyfill';
+import getJson from './utils/get-json';
+
 import './styles/main.scss';
-import getHtml from './utils/get-html';
 
 async function displayWebsiteHtml(url) {
     try {
-        const html = await getHtml(url);
+        const data = await getJson(url);
 
-        const div = document.createElement('div');
-        div.innerHTML = encodeURI(html);
+        const $component = document.createElement('div');
+        $component.classList.add('my-component');
 
-        document.body.appendChild(div);
+        const $element = document.createElement('div');
+        $element.classList.add('my-component__element');
+
+        $element.innerHTML = JSON.stringify(data);
+
+        $component.appendChild($element);
+        document.body.appendChild($component);
     } catch (e) {
         console.error(e);
     }
 }
 
-displayWebsiteHtml('http://localhost:8080');
+displayWebsiteHtml('https://jsonplaceholder.typicode.com/posts');
