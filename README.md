@@ -8,7 +8,7 @@
     * babel-preset-stage-0
     * babel-plugin-runtime-transform
 * eslint (with airbnb-base config)
-* SCSS -> extract to a bundled css file
+* SCSS -> (extract to a bundled css file, default not enabled)
 * autoprefixer
 * bundles will be appended to HTML automatically
 * appcache will be generated automatically
