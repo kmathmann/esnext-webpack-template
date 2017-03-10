@@ -11,11 +11,10 @@ export default (qa = false) => ( {
     ...BASE_CONFIG,
     devtool: qa ? 'inline-source-map' : 'hidden-source-map',
     plugins: [
-        new ExtractTextPlugin('[name].bundle.css'),
         new HtmlWebpackPlugin({
             template: path.resolve(ROOT_PATH, 'index.html')
         }),
-        new ExtractTextPlugin('[name].bundle.css'),
+        new ExtractTextPlugin('[name].bundle.css?[hash]'),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true
         }),
