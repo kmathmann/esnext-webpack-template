@@ -19,30 +19,30 @@
   ],
   "devDependencies": {
     "appcache-webpack-plugin": "^1.3.0",
-    "autoprefixer": "^6.7.2",
+    "autoprefixer": "^6.7.6",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.2.10",
+    "babel-loader": "^6.4.0",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.1.8",
+    "babel-preset-env": "^1.2.1",
     "babel-preset-stage-0": "^6.22.0",
-    "css-loader": "^0.23.1",
-    "eslint": "^3.15.0",
-    "eslint-config-airbnb-base": "^11.1.0",
+    "css-loader": "^0.27.1",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
     "eslint-plugin-import": "^2.2.0",
-    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^3.13.1",
-    "postcss-loader": "^1.3.0",
-    "sass-loader": "^3.2.3",
-    "style-loader": "^0.13.1",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.3.3",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "webpack-dev-server": "^2.4.1"
   },
   "author": "Kevin Mathmann",
   "license": "MIT",
   "dependencies": {
     "classlist-polyfill": "^1.0.2",
-    "whatwg-fetch": "^2.0.2"
+    "whatwg-fetch": "^2.0.3"
   }
 }
