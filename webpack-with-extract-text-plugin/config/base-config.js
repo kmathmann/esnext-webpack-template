@@ -1,8 +1,5 @@
-import webpack from 'webpack';
-import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import AppcacheWebpackPlugin from 'appcache-webpack-plugin';
+import path from 'path';
 
 const ROOT_PATH = path.resolve('./');
 
@@ -55,22 +52,4 @@ export default {
 
         ]
     },
-    devtool: 'hidden-source-map',
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(ROOT_PATH, 'index.html')
-        }),
-        new ExtractTextPlugin('[name].bundle.css'),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true
-        }),
-        new AppcacheWebpackPlugin(),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('production'),
-            __DEV__: false,
-            __QA__: false,
-            __LIVE__: true,
-        }),
-    ]
 };
-

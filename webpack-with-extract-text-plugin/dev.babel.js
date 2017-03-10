@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import BASE_CONFIG from './config/base-config';
@@ -19,6 +20,7 @@ export default {
         new HtmlWebpackPlugin({
             template: path.resolve(ROOT_PATH, 'index.html')
         }),
+        new ExtractTextPlugin('[name].bundle.css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development'),
             __DEV__: true,
