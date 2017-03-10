@@ -12,7 +12,7 @@ export default {
         extensions: ['.js', '.scss']
     },
     output: {
-        path: path.resolve(ROOT_PATH, 'dist'),
+        path: path.resolve(ROOT_PATH, 'build'),
         filename: '[name].bundle.js?[hash]'
     },
     module: {
