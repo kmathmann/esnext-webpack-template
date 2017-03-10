@@ -3,7 +3,7 @@ import path from 'path';
 
 const ROOT_PATH = path.resolve('./');
 
-export default {
+export default (dev) => ({
     entry: {
         template: [
             path.resolve('src/index')
@@ -14,7 +14,8 @@ export default {
     },
     output: {
         path: path.resolve(ROOT_PATH, 'build'),
-        filename: '[name].bundle.js?[hash]'
+        filename: `[name].bundle.js${dev ? '' : '[hash]'}`
+
     },
     module: {
         rules: [
@@ -32,7 +33,7 @@ export default {
                             loader: 'css-loader',
                             options: {
                                 sourceMap: true,
-                                minimize: true
+                                minimize: !dev
                             }
                         },
                         {
@@ -52,4 +53,4 @@ export default {
 
         ]
     },
-};
+});

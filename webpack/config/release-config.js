@@ -2,12 +2,12 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import AppcacheWebpackPlugin from 'appcache-webpack-plugin';
-import BASE_CONFIG from './base-config';
+import getBaseConfig from './base-config';
 
 const ROOT_PATH = path.resolve('./');
 
 export default (qa = false) => ( {
-    ...BASE_CONFIG,
+    ...getBaseConfig(false),
     devtool: qa ? 'inline-source-map' : 'hidden-source-map',
     plugins: [
         new HtmlWebpackPlugin({

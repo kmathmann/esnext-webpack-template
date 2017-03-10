@@ -2,12 +2,12 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-import BASE_CONFIG from './config/base-config';
+import getBaseConfig from './config/base-config';
 
 const ROOT_PATH = path.resolve('./');
 
 export default {
-    ...BASE_CONFIG,
+    ...getBaseConfig(true),
     devServer: {
         host: '0.0.0.0',
         port: 8080,
