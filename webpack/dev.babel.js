@@ -12,7 +12,8 @@ export default {
         host: '0.0.0.0',
         port: 8080,
         compress: true,
-        hot: true
+        hot: true,
+        disableHostCheck: true
     },
     devtool: 'inline-source-map',
     plugins: [
