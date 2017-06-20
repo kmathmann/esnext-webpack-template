@@ -1,5 +1,6 @@
 import './utils/polyfill';
 import getJson from './utils/get-json';
+import SERVER_URL from './constants/server-url';
 
 import './styles/main.scss';
 
@@ -22,4 +23,4 @@ async function displayWebsiteHtml(url) {
     }
 }
 
-displayWebsiteHtml('https://jsonplaceholder.typicode.com/posts');
+displayWebsiteHtml(SERVER_URL);
