@@ -14,7 +14,7 @@ export default (dev) => ({
     },
     output: {
         path: path.resolve(ROOT_PATH, 'build'),
-        filename: `[name].bundle.js${dev ? '' : '[hash]'}`
+        filename: `[name].bundle.js?${dev ? '' : '[hash]'}`
 
     },
     module: {
